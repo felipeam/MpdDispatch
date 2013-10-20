@@ -93,7 +93,7 @@ mpd_idle_parse_pair(const struct mpd_pair *pair)
 enum mpd_idle
 mpd_recv_idle(struct mpd_connection *connection, bool disable_timeout)
 {
-	enum mpd_idle flags = 0;
+	enum mpd_idle flags = 0x1;
 	struct mpd_pair *pair;
 	struct timeval old_timeout;
 
